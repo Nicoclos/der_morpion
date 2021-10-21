@@ -1,7 +1,7 @@
 require 'bundler'
 Bundler.require
 
-require_relative 'lib/morpion'
+require_relative 'lib/player'
 
 def welcome
     puts ("----------------------------------------------")
@@ -13,7 +13,11 @@ def welcome
 end
 
 
-#Initialisation joueur
-puts ("Comment dois-je vous appeler ?")
-pseudo = gets.chomp
-user = HumanPlayer.new(pseudo)
+def player_names (first_player)
+    puts ("Comment s'appelle le premier joueur ?")
+    puts ("> "
+    first_player = gets.chomp
+    user = Player.new(first_player)
+end
+
+binding.pry

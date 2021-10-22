@@ -33,6 +33,20 @@ class Board
         puts ""
         puts " "*6 + "\u{2716}\u{1F525}"*10
     end
+
+    def game_nul?
+        nul = 0
+        array.each do |i|
+          if i.value == ' '
+            nul += 1
+          end
+        end
+        if nul == 0
+          return true
+        else
+          return false
+        end
+    end
   
     def victory?
       #TO DO : une méthode qui vérifie le plateau et indique s'il y a un vainqueur ou match nul
@@ -66,6 +80,23 @@ class Board
       else
         return false
       end
+    end
+
+    def show
+        puts "\n\n"
+        puts ' ' * 10 + '-' * 19
+        puts ' ' * 10 + ('|' + ' ' * 5) * 3 + '|'
+        puts ' ' * 10 + "|  #{array[0].value}  |  #{array[1].value}  |  #{array[2].value}  |"
+        puts ' ' * 10 + ('|' + ' ' * 4 + '1') + ('|' + ' ' * 4 + '2') + ('|' + ' ' * 4 + '3') + '|'
+        puts ' ' * 10 + '-' * 19
+        puts ' ' * 10 + ('|' + ' ' * 5) * 3 + '|'
+        puts ' ' * 10 + "|  #{array[3].value}  |  #{array[4].value}  |  #{array[5].value}  |"
+        puts ' ' * 10 + ('|' + ' ' * 4 + '4') + ('|' + ' ' * 4 + '5') + ('|' + ' ' * 4 + '6') + '|'
+        puts ' ' * 10 + '-' * 19
+        puts ' ' * 10 + ('|' + ' ' * 5) * 3 + '|'
+        puts ' ' * 10 + "|  #{array[6].value}  |  #{array[7].value}  |  #{array[8].value}  |"
+        puts ' ' * 10 + ('|' + ' ' * 4 + '7') + ('|' + ' ' * 4 + '8') + ('|' + ' ' * 4 + '9') + '|'
+        puts ' ' * 10 + '-' * 19
     end
   
 end

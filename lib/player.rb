@@ -1,12 +1,14 @@
 class Player
-    attr_accessor :player1, :player2
-  
-    def initialize(p1, p2)
-      @player1 = p2
-      @player2 = p2
-    end
+  #TO DO : la classe a 2 attr_reader, son nom et sa valeur (X ou O).
+  attr_reader :name, :value, :points
 
+  
+  def initialize(name, value)
+    #TO DO : doit régler son nom et sa valeur
+    @name = name
+    @value = value
+    @points = 0
+    
+  end
 
 end
-
-# binding.pry

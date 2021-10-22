@@ -22,14 +22,14 @@ class Game
         @player_O = Player.new(gets.chomp.blue, "O".blue)
         puts "Parfait, bienvenue #{player_O.name}.\n Ta couleur sera le " + "BLEU".blue
         # puts "\n\n" + " "*5 + "\u{2716}\u{1F525}"*10
-        puts "\n\n" + "NOUS SOMMES PRÊTS À COMMENCER LA PARTIE!!!!".black.on_white
-        puts "\n\n" + " "*5 + "\u{2716}\u{1F525}"*10
+        puts "\n\n" + "NOUS SOMMES PRÊTS À COMMENCER LA PARTIE!!!!".green
+        # puts "\n\n" + " "*5 + "\u{2716}\u{1F525}"*10
         @board = Board.new
     end
   
-    def turn
-      #TO DO : méthode faisant appelle aux méthodes des autres classes (notamment à l'instance de Board). Elle affiche le plateau, demande au joueur ce qu'il joue, vérifie si un joueur a gagné, passe au joueur suivant si la partie n'est pas finie.
-      @board = Board.new
+    def play
+        #TO DO : méthode faisant appelle aux méthodes des autres classes (notamment à l'instance de Board). Elle affiche le plateau, demande au joueur ce qu'il joue, vérifie si un joueur a gagné, passe au joueur suivant si la partie n'est pas finie.
+    @board = Board.new
         while @board.victory? == false 
             @board.play_turn(@player_X)
             if @board.victory?

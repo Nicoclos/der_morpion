@@ -7,10 +7,7 @@ class Game
         puts " "*11 + "-" *21
         puts " "*10 + "|" + " "*21 + "|"
         puts " "*10 + "|  " + "SUPER MORPION !!!".black.on_white.underline + "  |"
-        # puts " "*10 +"|" + " "*4 +"\u{1F534}\u{1F7E0}\u{1F7E1}\u{1F7E2}\u{1F535}\u{1F7E3}" + " "*5 + "|"
         puts " "*11 + "-"*21
-        # puts "-"*43
-        # puts " "*6 + "\u{2716}\u{1F525}"*10 + "\n\n"
         puts "Le première joueur jouera avec les croix X.\n\n".underline
         puts "Joueur 1, quel est ton prénom?"
         print "> "
@@ -21,9 +18,7 @@ class Game
         print "> "
         @player_O = Player.new(gets.chomp.blue, "O".blue)
         puts "Parfait, bienvenue #{player_O.name}.\n Ta couleur sera le " + "BLEU".blue
-        # puts "\n\n" + " "*5 + "\u{2716}\u{1F525}"*10
         puts "\n\n" + "NOUS SOMMES PRÊTS À COMMENCER LA PARTIE!!!!".green
-        # puts "\n\n" + " "*5 + "\u{2716}\u{1F525}"*10
         @board = Board.new
     end
   
